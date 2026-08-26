@@ -46,7 +46,7 @@ This BLAS extension implements the operation
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="\mathbf{w} = \mathbf{x} + \mathbf{y}" data-equation="eq:wxpy">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@5e2f978bfa7172924d6ef44475e855da741f13f7/lib/node_modules/@stdlib/blas/ext/base/ndarray/gwxpy/docs/img/equation_wxpy.svg" alt="Equation for wxpy operation.">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@323cfc1e10b30d9ace1550c116466946771f3ef6/lib/node_modules/@stdlib/blas/ext/base/ndarray/gwxpy/docs/img/equation_wxpy.svg" alt="Equation for wxpy operation.">
     <br>
 </div> -->
 
@@ -56,14 +56,32 @@ This BLAS extension implements the operation
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-base-ndarray-gwxpy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import gwxpy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-gwxpy@esm/index.mjs';
+var gwxpy = require( '@stdlib/blas-ext-base-ndarray-gwxpy' );
 ```
 
 #### gwxpy( arrays )
@@ -71,7 +89,7 @@ import gwxpy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-g
 Adds elements of a one-dimensional ndarray to the corresponding elements of a second one-dimensional ndarray and assigns the results to elements in a third one-dimensional ndarray.
 
 ```javascript
-import vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-ctor@esm/index.mjs';
+var vector = require( '@stdlib/ndarray-vector-ctor' );
 
 var x = vector( [ 1.0, 2.0, 3.0, 4.0, 5.0 ], 'generic' );
 var y = vector( [ 2.0, 3.0, 4.0, 5.0, 6.0 ], 'generic' );
@@ -105,15 +123,10 @@ The function has the following parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-discrete-uniform@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import gwxpy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-gwxpy@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-discrete-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var gwxpy = require( '@stdlib/blas-ext-base-ndarray-gwxpy' );
 
 var opts = {
     'dtype': 'generic'
@@ -129,10 +142,6 @@ var w = discreteUniform( [ 10 ], -100, 100, opts );
 
 gwxpy( [ x, y, w ] );
 console.log( ndarray2array( w ) );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -156,7 +165,7 @@ console.log( ndarray2array( w ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
