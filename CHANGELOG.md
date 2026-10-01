@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-28)
+## Unreleased (2026-10-01)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`e44628a`](https://github.com/stdlib-js/stdlib/commit/e44628a23b2755ad13a33c775cb81708f9f5c94c) - **refactor:** use variable declaration assignment _(by Athan Reines)_
 -   [`aef88f4`](https://github.com/stdlib-js/stdlib/commit/aef88f46f65a647745f12986f660031976b51e96) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`68cf8ce`](https://github.com/stdlib-js/stdlib/commit/68cf8ce0a381d65660506efd5507aefbed2f724c) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`323cfc1`](https://github.com/stdlib-js/stdlib/commit/323cfc1e10b30d9ace1550c116466946771f3ef6) - **docs:** update Markdown equation SVGs _(by stdlib-bot)_
