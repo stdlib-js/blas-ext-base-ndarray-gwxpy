@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,18 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-ext-base-gwxpy' ).ndarray;
-
-
-// MAIN //
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
 * Adds elements of a one-dimensional ndarray to the corresponding elements of a second one-dimensional ndarray and assigns the results to elements in a third one-dimensional ndarray.
@@ -40,8 +33,8 @@ var strided = require( '@stdlib/blas-ext-base-gwxpy' ).ndarray;
 *     -   second one-dimensional input ndarray.
 *     -   a one-dimensional output ndarray.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {ndarray} output ndarray
+* @param arrays - array-like object containing ndarrays
+* @returns output ndarray
 *
 * @example
 * var vector = require( '@stdlib/ndarray-vector-ctor' );
@@ -53,15 +46,9 @@ var strided = require( '@stdlib/blas-ext-base-gwxpy' ).ndarray;
 * var out = gwxpy( [ x, y, w ] );
 * // returns <ndarray>[ 3.0, 5.0, 7.0, 9.0, 11.0 ]
 */
-function gwxpy( arrays ) {
-	var x = arrays[ 0 ];
-	var y = arrays[ 1 ];
-	var w = arrays[ 2 ];
-	strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ), getData( y ), getStride( y, 0 ), getOffset( y ), getData( w ), getStride( w, 0 ), getOffset( w ) ); // eslint-disable-line max-len
-	return w;
-}
+declare function gwxpy<T extends typedndarray<number> = typedndarray<number>>( arrays: [ typedndarray<number>, typedndarray<number>, T ] ): T;
 
 
 // EXPORTS //
 
-module.exports = gwxpy;
+export = gwxpy;
